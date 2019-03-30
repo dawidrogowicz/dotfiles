@@ -5,7 +5,7 @@ C='#ffffff22'  # clear ish
 D='#03cea4ff'  # default
 T='#03cea4ff'  # text
 W='#e40066ff'  # wrong
-V='#fbb13cff'  # verifying
+V='#e40066ff'  # verifying
 
 i3lock \
 --insidevercolor=$C   \
