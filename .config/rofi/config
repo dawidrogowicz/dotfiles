@@ -1,0 +1,6 @@
+rofi.show: run
+rofi.modi: window,ssh,run
+rofi.theme: /home/dawid/.config/rofi/carbo.rasi
+rofi.fullscreen:true
+rofi.terminal:urxvt
+rofi.font: Noto Sans 15
