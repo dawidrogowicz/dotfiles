@@ -1,0 +1,2 @@
+.config/wpg/templates/*
+!.config/wpg/templates/*.base
