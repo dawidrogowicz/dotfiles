@@ -1,0 +1,44 @@
+foreground {color15}
+background {color0}
+cursor {color5}
+url_color {color2}
+
+selection_foreground {color0}
+selection_background {color15}
+
+#: The 16 terminal colors. There are 8 basic colors, each color has a
+#: dull and bright version. You can also set the remaining colors from
+#: the 256 color table as color16 to color255.
+
+# black dark/light
+color0                          {color0}
+color8                          {color8}
+
+# red dark/light
+color1                          {color1}
+color9                          {color9}
+
+# green dark/light
+color2                          {color2}
+color10                         {color10}
+
+# yellow dark/light
+color3                          {color3}
+color11                         {color11}
+
+# blue dark/light
+color4                          {color4}
+color12                         {color12}
+
+# magenta dark/light
+color5                          {color5}
+color13                         {color13}
+
+# cyan dark/light
+color6                          {color6}
+color14                         {color14}
+
+# white dark/light
+color7                          {color7}
+color15                         {color15}
+
