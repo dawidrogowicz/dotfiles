@@ -16,3 +16,4 @@ alias config-status='config status -uno'
 if status is-interactive
   fetch
 end
+
