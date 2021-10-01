@@ -13,4 +13,6 @@ alias edit_omf='nvim $OMF_CONFIG/init.fish'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles.git --work-tree=$HOME'
 alias config-status='config status -uno'
 
-fetch
+if status is-interactive
+  fetch
+end
