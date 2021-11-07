@@ -56,6 +56,6 @@ fi
 
 while true
 do
-	/usr/local/bin/dwm > /var/log/dwm/dwm.log 2>&1
+	dwm > /var/log/dwm/dwm.log 2>&1
 done
 

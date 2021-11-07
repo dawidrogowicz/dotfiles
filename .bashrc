@@ -14,6 +14,9 @@ if [[ $- != *i* ]] ; then
 	return
 fi
 
+# DWM needs to have wpg in PATH before it's started
+export PATH=$PATH:~/.local/bin
+
 if shopt -q login_shell; then
     [[ -t 0 && $(tty) == /dev/tty1 && ! $DISPLAY ]] && exec startx
 fi
