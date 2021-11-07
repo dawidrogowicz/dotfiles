@@ -1,0 +1,44 @@
+foreground #bebebe
+background #111111
+cursor #5297cf
+url_color #5e7175
+
+selection_foreground #111111
+selection_background #bebebe
+
+#: The 16 terminal colors. There are 8 basic colors, each color has a
+#: dull and bright version. You can also set the remaining colors from
+#: the 256 color table as color16 to color255.
+
+# black dark/light
+color0                          #111111
+color8                          #666666
+
+# red dark/light
+color1                          #aece91
+color9                          #aece91
+
+# green dark/light
+color2                          #5e7175
+color10                         #5e7175
+
+# yellow dark/light
+color3                          #d36265
+color11                         #d36265
+
+# blue dark/light
+color4                          #963c59
+color12                         #963c59
+
+# magenta dark/light
+color5                          #5297cf
+color13                         #5297cf
+
+# cyan dark/light
+color6                          #e7e18c
+color14                         #e7e18c
+
+# white dark/light
+color7                          #bebebe
+color15                         #bebebe
+

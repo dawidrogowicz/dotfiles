@@ -1,9 +1,5 @@
-set -g -x WINEDLLPATH $WINEDLLPATH:/opt/discord-rpc/bin64:/opt/discord-rpc/bin32
 set -g fish_greeting
-set -x NVM_DIR $HOME/.nvm
-set -x CONF $HOME/.config
 
-set -g theme_nerd_fonts yes
 set -g theme_color_scheme terminal2
 
 alias rm='rm -I'

@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/dawid/.config/wpg/wallpapers/haruhi-suzumiya.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#111111",
+        "foreground": "#bebebe",
+        "cursor": "#bebebe"
+    },
+    "colors": {
+        "color0": "#111111",
+        "color1": "#aece91",
+        "color2": "#5e7175",
+        "color3": "#d36265",
+        "color4": "#963c59",
+        "color5": "#5297cf",
+        "color6": "#e7e18c",
+        "color7": "#bebebe",
+        "color8": "#666666",
+        "color9": "#aece91",
+        "color10": "#5e7175",
+        "color11": "#d36265",
+        "color12": "#963c59",
+        "color13": "#5297cf",
+        "color14": "#e7e18c",
+        "color15": "#bebebe"
+    }
+}
