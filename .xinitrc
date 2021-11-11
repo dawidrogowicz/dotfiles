@@ -54,6 +54,16 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+export XMODIFIERS=@im=ibus
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+
+# Use `xim` in case some apps (like Chromium) refuse to work with IBus
+# export GTK_IM_MODULE=xim
+# export QT_IM_MODULE=xim
+
+ibus-daemon -drx
+
 while true
 do
 	dwm > /var/log/dwm/dwm.log 2>&1

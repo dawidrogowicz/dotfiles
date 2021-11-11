@@ -1,6 +1,5 @@
 #!/bin/sh
 
-~/.screenlayout/default.sh
-~/.scripts/setRandomTheme.sh
+~/.scripts/setCurrentTheme.sh
 ~/.config/dwm/statusbar.sh &
 
