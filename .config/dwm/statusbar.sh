@@ -3,7 +3,7 @@
 
 while true
 do
-  cpu_temp=$(($(cat /sys/class/thermal/thermal_zone0/temp) / 1000))C
+  cpu_temp=$(($(cat /sys/class/thermal/thermal_zone2/temp) / 1000))C
 
   mem_total=$(free --giga | awk '{ if($1 == "Mem:") print $2 }')G
   mem_used=$(free --mega | awk '{ if($1 == "Mem:") print $3 }')
