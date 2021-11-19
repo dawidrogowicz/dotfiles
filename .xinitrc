@@ -54,18 +54,12 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-export XMODIFIERS=@im=ibus
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
-
-# Use `xim` in case some apps (like Chromium) refuse to work with IBus
-# export GTK_IM_MODULE=xim
-# export QT_IM_MODULE=xim
-
-ibus-daemon -drx
+export XMODIFIERS="@im=fcitx"
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
 
 while true
 do
-	dwm > /var/log/dwm/dwm.log 2>&1
+  dbus-launch --sh-syntax --exit-with-session dwm > /var/log/dwm/dwm.log 2>&1
 done
 
