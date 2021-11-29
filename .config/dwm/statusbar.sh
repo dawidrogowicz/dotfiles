@@ -4,6 +4,7 @@
 while true
 do
   cpu_temp=$(($(cat /sys/class/thermal/thermal_zone2/temp) / 1000))C
+  gpu_temp=$(nvidia-smi --query-gpu=temperature.gpu --format=csv | awk 'NR==2 { print $0 }')C
 
   mem_total=$(free --giga | awk '{ if($1 == "Mem:") print $2 }')G
   mem_used=$(free --mega | awk '{ if($1 == "Mem:") print $3 }')
@@ -24,7 +25,7 @@ do
 
   datetime=$(TZ='Europe/Warsaw' date +"%a %D %H:%M")
 
-  xsetroot -name "[$cpu_temp | $mem_used/$mem_total] [$volume] $datetime"
+  xsetroot -name "[cpu $cpu_temp | gpu $gpu_temp | $mem_used/$mem_total] [$volume] $datetime"
 	
   sleep 2
 done
