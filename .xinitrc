@@ -8,15 +8,7 @@ sysmodmap=/etc/X11/xinit/Xmodmap
 # merge in defaults and keymaps
 
 if [ -f $sysresources ]; then
-
-
-
-
-
-
-
     xrdb -merge $sysresources
-
 fi
 
 if [ -f $sysmodmap ]; then
@@ -24,15 +16,7 @@ if [ -f $sysmodmap ]; then
 fi
 
 if [ -f "$userresources" ]; then
-
-
-
-
-
-
-
     xrdb -merge "$userresources"
-
 fi
 
 if [ -f "$usermodmap" ]; then
@@ -58,8 +42,12 @@ export XMODIFIERS="@im=fcitx"
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 
-while true
-do
-  dbus-launch --sh-syntax --exit-with-session dwm > /var/log/dwm/dwm.log 2>&1
-done
+source /home/dawid/.screenlayout/desktop.sh
+
+# while true
+# do
+  # dbus-launch --sh-syntax --exit-with-session dwm > /var/log/dwm/dwm.log 2>&1
+# done
+
+dbus-launch --sh-syntax --exit-with-session awesome 
 
