@@ -5,7 +5,7 @@ local wibox = require("wibox")
 
 -- {{{ Wibar }}}
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+local textclock = wibox.widget.textclock()
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -47,4 +47,9 @@ local tasklist_buttons = gears.table.join(
                                               awful.client.focus.byidx(-1)
                                           end))
 
+return {
+  textclock = textclock,
+  taglist_buttons = taglist_buttons,
+  tasklist_buttons = tasklist_buttons
+}
 

@@ -34,7 +34,6 @@ local main = {
   screens = require("main.screens"),
 }
 
--- Custom Local Library: Keys and Mouse Binding
 local bindings = {
   clientbuttons = require("bindings.clientbuttons"),
   clientkeys    = require("bindings.clientkeys"),
@@ -43,6 +42,9 @@ local bindings = {
   mediakeys     = require("bindings.mediakeys"),
 }
 
+local deco = {
+  wibar = require("deco.wibar"),
+}
 
 -- {{{ Theme }}}
 RC.shuffle_theme = main.theme.shuffle_theme
@@ -67,7 +69,7 @@ RC.keyboardlayout = awful.widget.keyboardlayout()
 
 
 -- {{{ Wibar }}}
-require("decoration.wibar")
+RC.wibar = deco.wibar
 
 
 -- {{{ Screens }}}
