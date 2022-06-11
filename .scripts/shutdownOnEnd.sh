@@ -18,6 +18,7 @@ do
   then
     echo "process still running"
   else
+    echo $(date) > last_scheduled_shudown.txt
     shutdown -h now
   fi
 
