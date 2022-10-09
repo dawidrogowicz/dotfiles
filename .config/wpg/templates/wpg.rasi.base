@@ -20,13 +20,14 @@
     active:		{active};
     inactive:	{inactive};
 
-	background:						@color0;
+    background:						@color0;
     foreground:						@color15;
 
     background-color:				@background;
     border-color:					@background;
     separatorcolor:					@color8;
     scrollbar-handle:				@color9;
+    highlight:              @color3;
 
     normal-background:				@background;
     normal-foreground:				@foreground;
@@ -53,14 +54,14 @@
 
 window {{
     background-color: @background;
-	border-color: @active;
+    border-color: @active;
     border:           5;
     padding:          0;
 }}
 
 mainbox {{
     border:  0px;
-	border-color: @active;
+    border-color: @active;
     padding: 0;
 }}
 
@@ -80,7 +81,7 @@ listview {{
     padding:      2px 0 0;
     border-color: @separatorcolor;
     spacing:      0px;
-    scrollbar:    @scrollbar;
+    scrollbar:    @scrollbar-handle;
 }}
 
 element {{
