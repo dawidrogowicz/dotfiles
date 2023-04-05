@@ -3,15 +3,13 @@ local awful = require("awful")
 local gears = require("gears")
 local wibox = require("wibox")
 local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
-local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
-local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 local hw_stats_widget = require("helpers.hw-stats-widget")
 
 
 local default_layouts = {
-  awful.layout.suit.max.fullscreen,
-  awful.layout.suit.tile.bottom,
-  awful.layout.suit.spiral
+  awful.layout.suit.spiral,
+  awful.layout.suit.spiral,
+  awful.layout.suit.spiral,
 }
 
 local _M = {}
@@ -64,7 +62,6 @@ function _M.get()
               layout = wibox.layout.fixed.horizontal,
               cpu_widget(),
               hw_stats_widget(),
-              volume_widget(),
               RC.keyboardlayout,
               wibox.widget.systray(),
               RC.wibar.textclock,

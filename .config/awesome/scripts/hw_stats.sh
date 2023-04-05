@@ -15,5 +15,14 @@ else
   mem_used=${mem_used}M
 fi
 
-echo "[cpu $cpu_temp | gpu $amd_gpu_temp $amd_gpu_usage | $mem_used/$mem_total]"
+mute=$(pulsemixer --get-mute)
+volume=$(pulsemixer --get-volume | awk '{ print $1 }')
+if (($mute == 1))
+then
+  volume='m'
+else
+  volume=${volume}%
+fi
+
+echo "[cpu $cpu_temp | gpu $amd_gpu_temp $amd_gpu_usage | $mem_used/$mem_total] $volume"
 
