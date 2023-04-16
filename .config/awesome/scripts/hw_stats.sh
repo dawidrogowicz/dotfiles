@@ -1,6 +1,9 @@
 #!/bin/sh
 
-cpu_temp=+$(($(cat /sys/class/thermal/thermal_zone2/temp) / 1000))°C
+# Intel
+# cpu_temp=+$(($(cat /sys/class/thermal/thermal_zone2/temp) / 1000))°C
+# AMD
+cpu_temp=$(sensors 'k10temp-pci-00c3' | awk 'NR==3 { print $2 }')
 # nvidia_gpu_temp=$(nvidia-smi --query-gpu=temperature.gpu --format=csv | awk 'NR==2 { print $0 }')C
 # nvidia_gpu_usage=$(nvidia-smi --query-gpu=utilization.gpu --format=csv | awk 'NR==2 { print $0 }')
 amd_gpu_temp=$(sensors 'amdgpu-pci-0300' | awk 'NR==5 { print $2 }')
@@ -15,5 +18,5 @@ else
   mem_used=${mem_used}M
 fi
 
-echo "[cpu $cpu_temp | gpu $amd_gpu_temp $amd_gpu_usage | $mem_used/$mem_total]"
+echo "[$cpu_temp | gpu $amd_gpu_temp $amd_gpu_usage | $mem_used/$mem_total]"
 

@@ -56,10 +56,10 @@ function _M.get(clientkeys, clientbuttons)
       -- },
 
       -- Set screen and tag
-      { rule_any = { class = { "ffxiv_dx11.exe" }
+      { rule_any = { class = { "ffxiv_dx11.exe", "steam_app_" }
         }, properties = { screen = 1, tag = "1" } 
       },
-      { rule_any = { class = { "discord", "steam" }
+      { rule_any = { class = { "discord", "Steam" }
         }, properties = { screen = 2, tag = "1" } 
       },
       { rule_any = { class = { "Brave-browser" }

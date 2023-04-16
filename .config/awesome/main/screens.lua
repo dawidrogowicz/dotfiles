@@ -3,7 +3,6 @@ local awful = require("awful")
 local gears = require("gears")
 local wibox = require("wibox")
 local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
-local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
 local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 local hw_stats_widget = require("helpers.hw-stats-widget")
 
@@ -66,7 +65,6 @@ function _M.get()
               hw_stats_widget(),
               volume_widget(),
               RC.keyboardlayout,
-              wibox.widget.systray(),
               RC.wibar.textclock,
               s.mylayoutbox,
           },
