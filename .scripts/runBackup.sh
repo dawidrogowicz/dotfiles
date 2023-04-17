@@ -11,4 +11,14 @@ rsync -a --delete --quiet --inplace --backup --backup-dir=/backup/incr/$DAY /etc
 rsync -a --delete --quiet --inplace --backup --backup-dir=/backup/incr/$DAY --exclude '/var/cache/*' /var /backup/full
 rsync -a --delete --quiet --inplace --backup --backup-dir=/backup/incr/$DAY /root /backup/full
 rsync -a --delete --quiet --inplace --backup --backup-dir=/backup/incr/$DAY /boot /backup/full
-rsync -a --delete --quiet --inplace --backup --backup-dir=/backup/incr/$DAY/home --exclude={'/dawid/Videos','/dawid/.local','/dawid/.steam','/dawid/.cache','/dawid/.wine','/dawid/Games','/dawid/Downloads','/dawid/dev'} /home/dawid /backup/full/home
+
+TARGET_USER=dawid
+mkdir -p /backup/incr/$DAY/home/$TARGET_USER
+mkdir -p /backup/full/home/$TARGET_USER
+
+HOME_DIRS_TO_SYNC=(.config .scripts Documents Pictures)
+
+for dir in ${HOME_DIRS_TO_SYNC[*]}; do
+  rsync -a --delete --quiet --inplace --backup --backup-dir=/backup/incr/$DAY/home/$TARGET_USER/$dir /home/$TARGET_USER/$dir /backup/full/home/$TARGET_USER
+done
+

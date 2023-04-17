@@ -1,5 +1,7 @@
+-- local autocmd = vim.api.nvim_create_autocmd
 
-vim.opt.list = true
-vim.opt.listchars:append({ space = "\u22c5" })
-vim.opt.listchars:append({ eol = "\u21b4"})
-vim.opt.termguicolors = true
+-- Auto resize panes when resizing nvim window
+-- autocmd("VimResized", {
+--   pattern = "*",
+--   command = "tabdo wincmd =",
+-- })
