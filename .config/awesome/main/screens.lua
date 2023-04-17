@@ -3,10 +3,6 @@ local awful = require("awful")
 local gears = require("gears")
 local wibox = require("wibox")
 local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
-<<<<<<< HEAD
-local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
-=======
->>>>>>> d74b65b881673ab9a05ab2df6f83e1b8f4fb8ebd
 local hw_stats_widget = require("helpers.hw-stats-widget")
 
 
