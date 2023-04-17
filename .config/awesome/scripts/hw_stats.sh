@@ -1,9 +1,13 @@
 #!/bin/sh
 
-# Intel
-# cpu_temp=+$(($(cat /sys/class/thermal/thermal_zone2/temp) / 1000))°C
-# AMD
-cpu_temp=$(sensors 'k10temp-pci-00c3' | awk 'NR==3 { print $2 }')
+cpu_vendor=$(cat /proc/cpuinfo | grep vendor_id | awk 'NR==1 { print $3 }')
+if (($cpu_vendor == "GenuineIntel"))
+then
+  cpu_temp=+$(($(cat /sys/class/thermal/thermal_zone2/temp) / 1000))°C
+else
+  cpu_temp=$(sensors 'k10temp-pci-00c3' | awk 'NR==3 { print $2 }')
+fi
+
 # nvidia_gpu_temp=$(nvidia-smi --query-gpu=temperature.gpu --format=csv | awk 'NR==2 { print $0 }')C
 # nvidia_gpu_usage=$(nvidia-smi --query-gpu=utilization.gpu --format=csv | awk 'NR==2 { print $0 }')
 amd_gpu_temp=$(sensors 'amdgpu-pci-0300' | awk 'NR==5 { print $2 }')
