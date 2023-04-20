@@ -1,7 +1,6 @@
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
-require("gtk-theme")
 
 -- Standard awesome library
 local gears = require("gears")
@@ -49,8 +48,6 @@ local deco = {
 
 -- {{{ Theme }}}
 RC.shuffle_theme = main.theme.shuffle_theme
-RC.current_wallpaper = main.theme.current_wallpaper
-RC.set_wallpaper = main.theme.set_wallpaper
 
 
 -- {{{ Layouts }}}

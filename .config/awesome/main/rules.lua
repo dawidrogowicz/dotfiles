@@ -48,26 +48,7 @@ function _M.get(clientkeys, clientbuttons)
             "ConfigManager",  -- Thunderbird's about:config.
             "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
           }
-        }, properties = { floating = true }},
-
-      -- Add titlebars to normal clients and dialogs
-      -- { rule_any = {type = { "normal", "dialog" }
-        -- }, properties = { titlebars_enabled = true }
-      -- },
-
-      -- Set screen and tag
-      { rule_any = { class = { "ffxiv_dx11.exe", "steam_app_" }
-        }, properties = { screen = 1, tag = "1" } 
-      },
-      { rule_any = { class = { "discord", "Steam" }
-        }, properties = { screen = 2, tag = "1" } 
-      },
-      { rule_any = { class = { "Brave-browser" }
-        }, properties = { screen = 3, tag = "1" } 
-      },
-      { rule_any = { class = { "Lutris" }
-        }, properties = { screen = 3, tag = "2" } 
-      }
+        }, properties = { floating = true }}
   }
 end
 

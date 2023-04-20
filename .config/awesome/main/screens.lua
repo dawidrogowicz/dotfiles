@@ -15,9 +15,6 @@ local default_layouts = {
 local _M = {}
 function _M.get()
   awful.screen.connect_for_each_screen(function(s)
-      -- Wallpaper
-      RC.set_wallpaper(s)
-
       -- Each screen has its own tag table.
       awful.tag({ "1", "2", "3", "4", "5" }, s, default_layouts[s.index])
 
