@@ -14,6 +14,7 @@ local default_layouts = {
 
 local _M = {}
 function _M.get()
+  awful.spawn.easy_async("/bin/sh -c '~/.scripts/setCurrentWallpaper.sh'")
   awful.screen.connect_for_each_screen(function(s)
       -- Each screen has its own tag table.
       awful.tag({ "1", "2", "3", "4", "5" }, s, default_layouts[s.index])

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cpu_vendor=$(cat /proc/cpuinfo | grep vendor_id | awk 'NR==1 { print $3 }')
-if (($cpu_vendor == "GenuineIntel"))
+if [[ $cpu_vendor = *"GenuineIntel"* ]]
 then
   cpu_temp=+$(($(cat /sys/class/thermal/thermal_zone2/temp) / 1000))°C
 else
